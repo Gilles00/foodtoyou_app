@@ -1,16 +1,22 @@
 # food_app
 
-A new Flutter project.
+A new Flutter project sampling the current market trending food delivery applications.
 
-## Getting Started
+## To be Known:
 
-This project is a starting point for a Flutter application.
+This app has been built for all 3 Android, iOS and Web market places.
 
-A few resources to get you started if this is your first Flutter project:
+- The Google Map for Web platform is being updated. It will be coming into action shortly.
+- The Android Version has all the features working fine.
+- Some features like Reviews, Directions to the Restaurant, Cart Page needs to be built which will be done further.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Pages available are:
+        - HomePage
+              1.Restaurant List
+              2. Dishes List
+        - Restaurant Detail Page
+        - About Page(Navigated from sidebar)
+        
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
