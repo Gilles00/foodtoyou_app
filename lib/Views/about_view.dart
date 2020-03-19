@@ -6,7 +6,7 @@ class AboutScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("About Page"),
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.pink,
       ),
       body: Container(
         child: Column(
@@ -16,16 +16,16 @@ class AboutScreen extends StatelessWidget {
               child: Center(
                 child: CircleAvatar(
                   child: ClipOval(
-                      child: Image.asset("assets/images/food_logo.png")),
+                      child: Image.asset("assets/images/kindpng_1108769.png")),
                   radius: 100.0,
                   backgroundColor: Colors.redAccent,
                 ),
               ),
             ),
             Text(
-              "FoodToYou",
+              "Welcome App",
               style: TextStyle(
-                  color: Colors.green,
+                  color: Colors.pink,
                   fontSize: 45.0,
                   fontWeight: FontWeight.bold),
             ),

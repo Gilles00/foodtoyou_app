@@ -3,20 +3,20 @@ import 'package:food_app/Views/restaurant_location.dart';
 
 Image foodimage = Image.asset('assets/images/dosa.jpeg');
 
-class RestaurantDetail extends StatefulWidget {
+class OccasionDetail extends StatefulWidget {
   int index;
   String title;
 
-  RestaurantDetail({this.index, this.title});
+  OccasionDetail({this.index, this.title});
 
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
-    return RestaurantDetailState();
+    return OccasionDetailState();
   }
 }
 
-class RestaurantDetailState extends State<RestaurantDetail>
+class OccasionDetailState extends State<OccasionDetail>
     with SingleTickerProviderStateMixin {
   TabController tabController;
 
@@ -33,10 +33,10 @@ class RestaurantDetailState extends State<RestaurantDetail>
     return Scaffold(
         appBar: AppBar(
           title: Text(
-            widget.title,
+            "Marriage",
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
-          backgroundColor: Colors.green,
+          backgroundColor: Colors.pink,
           actions: <Widget>[
             InkResponse(
               onTap: () {},
@@ -49,18 +49,6 @@ class RestaurantDetailState extends State<RestaurantDetail>
         ),
         body: Column(
           children: <Widget>[
-            Container(
-                height: MediaQuery.of(context).size.height / 3.5,
-                padding: EdgeInsets.symmetric(vertical: 5.0, horizontal: 10.0),
-                child: Hero(
-                  tag: widget.index,
-                  child: foodimage,
-                )),
-            FlatButton(
-              onPressed: () {},
-              child: Text("Estimated Delivery to you : 20 Mins"),
-              color: Colors.green,
-            ),
             Expanded(
               child: DetailTabView(
                 tabController: tabController,
@@ -86,14 +74,14 @@ class DetailTabView extends StatelessWidget {
             indicator: UnderlineTabIndicator(
               borderSide: BorderSide.none,
             ),
-            labelStyle: TextStyle(color: Colors.green),
+            labelStyle: TextStyle(color: Colors.pink),
             unselectedLabelColor: Colors.black,
-            labelColor: Colors.green,
+            labelColor: Colors.pink,
             controller: tabController,
             tabs: <Widget>[
               Tab(
                 child: Text(
-                  ("FOOD MENU"),
+                  ("PROCURE"),
                   style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.bold),
                 ),
               ),
@@ -121,20 +109,12 @@ class DetailTabView extends StatelessWidget {
                   child: ListView(
                 children: ListTile.divideTiles(
                     context: context,
-                    color: Colors.green,
+                    color: Colors.pink,
                     tiles: [
-                      ListTile(title: Text("Idlies"), trailing: Icon(Icons.add)),
-                      ListTile(title: Text("Set Dosa"),trailing: Icon(Icons.add)),
-                      ListTile(title: Text("Onion Dosa"),trailing: Icon(Icons.add)),
-                      ListTile(title: Text("Masal Dosa"), trailing: Icon(Icons.add)),
-                      ListTile(title: Text("Ghee roast"), trailing: Icon(Icons.add)),
-                      ListTile(title: Text("Podi Dosa"), trailing: Icon(Icons.add)),
-                      ListTile(title: Text("Rava Dosa"), trailing: Icon(Icons.add)),
-                      ListTile(title: Text("Ghee Masal Dosa"), trailing: Icon(Icons.add)),
-                      ListTile(title: Text("Chapatis"), trailing: Icon(Icons.add)),
-                      ListTile(title: Text("Pongal"), trailing: Icon(Icons.add)),
-                      ListTile(title: Text("Vada with Sambar"), trailing: Icon(Icons.add)),
-                      ListTile(title: Text("Poori"), trailing: Icon(Icons.add)),
+                      ListTile(title: Text("Dress"), trailing: Icon(Icons.add)),
+                      ListTile(title: Text("Make Up"), trailing: Icon(Icons.add)),
+                      ListTile(title: Text("Party Hall"), trailing: Icon(Icons.add)),
+                      ListTile(title: Text("Decorations"), trailing: Icon(Icons.add)),
                     ]).toList(),
               )),
               RestaurantMap(),

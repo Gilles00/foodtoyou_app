@@ -25,7 +25,7 @@ class HomePageState extends State<Homepage> with TickerProviderStateMixin {
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
-        title: Text("FoodToYou"),
+        title: Text("Welcome App"),
         actions: <Widget>[
           InkResponse(
             onTap: (){},
@@ -35,17 +35,17 @@ class HomePageState extends State<Homepage> with TickerProviderStateMixin {
             ),
           )
         ],
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.pink,
         bottom: TabBar(
           unselectedLabelColor: Colors.white,
           labelColor: Colors.black,
           tabs: [
             new Tab(
-                text: "RESTAURANT LIST",
+                text: "OCCASIONS LIST",
                 icon: new Icon(Icons.format_list_bulleted)),
             new Tab(
-              text: "DISHES",
-              icon: Icon(Icons.fastfood),
+              text: "MERCHANTS",
+              icon: Icon(Icons.transfer_within_a_station),
             ),
           ],
           controller: _tabController,
@@ -69,7 +69,7 @@ class HomePageState extends State<Homepage> with TickerProviderStateMixin {
                   child:
                       ClipOval(child: Image.asset("assets/images/user.png"))),
               decoration: BoxDecoration(
-                color: Colors.green,
+                color: Colors.pink,
               ),
             ),
             ListTile(
@@ -96,7 +96,7 @@ class HomePageState extends State<Homepage> with TickerProviderStateMixin {
         ),
       ),
       body: TabBarView(
-        children: [ResturantListView(), DishesListView()],
+        children: [Occasionspage(), MerchantsPage()],
         controller: _tabController,
       ),
     );

@@ -3,7 +3,7 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class RestaurantMap extends StatefulWidget {
   @override
-  State<RestaurantMap> createState() => RestaurantMapSampleState();
+  RestaurantMapSampleState createState() => RestaurantMapSampleState();
 }
 
 class RestaurantMapSampleState extends State<RestaurantMap> {
@@ -32,7 +32,7 @@ class RestaurantMapSampleState extends State<RestaurantMap> {
                 tooltip: "Take me there",
                 child: Icon(Icons.drive_eta),
                 onPressed: () {},
-                backgroundColor: Colors.green,
+                backgroundColor: Colors.pink,
               )),
         ],
       ),
